@@ -15,7 +15,12 @@ const clothesinput = document.getElementById('clothes-input');
 const newclothestext = clothesinput.value ;
 const newclothesamount = parseInt(newclothestext)
 const foodrentcloth = foodrenttotal + newclothesamount
-console.log(foodrentcloth);
+
 // update total-Expenses
-const 
+const totalExpenses = document.getElementById('total-Expense')
+const previostotalExpensestext = totalExpenses.innerText;
+const previostotalExpensesamount = parseInt(previostotalExpensestext);
+const newExpenses = previostotalExpensesamount +foodrentcloth ;
+
+totalExpenses.innerText= newExpenses;
 })
