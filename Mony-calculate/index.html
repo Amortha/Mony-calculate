@@ -25,14 +25,14 @@
       <div class="col-6 ">
         <div class="p-3 text-center second-col  ">
            <h3>Income</h3>
-           <h5>Income:   <input  class="input input-alinment1"  type="number" class="" value="10000"></h5>
+           <h5>Income:   <input id="income-input" class="input input-alinment1"  type="number" class="" value="10000"></h5>
            <h3>Expenses</h3>
-           <h5>Food: <input class="input input-alinment2" type="number" value="3000"></h5>
-           <h5 class="">Rent: <input  class="input input-alinment2"  type="number" value = "2000"></h5>
-           <h5>Clothes: <input  class="input input-alinment3"  class=""  type="number" value="500"></h5>
+           <h5>Food: <input id="food-input" class="input input-alinment2" type="number" value="3000"></h5>
+           <h5 class="">Rent: <input id="rent-input"  class="input input-alinment2"  type="number" value = "2000"></h5>
+           <h5>Clothes: <input id="clothes-input"  class="input input-alinment3"  class=""  type="number" value="500"></h5>
            <!--  total Calculate  -->
-           <button type="button" class="btn btn-primary px-4  ">Calculate</button>
-           <h3 class="py-2">Total Expenses: <span>5500</span></h3>
+           <button id = "Calculate" type="button" class="btn btn-primary px-4  ">Calculate</button>
+           <h3 class="py-2">Total Expenses: <span id="totalExpense">5500</span></h3>
           <h5 class="py-2">Blance: <span>4500</span></h5>
           <p>save:<input class="bottam-input text-center mx-2" type="number" value = "20"> <span>%</span> <button class="btn btn-primary px-4 mx-2">Save</button> </p>
          <h3 class="py-2">Saving Amount: <span>2000</span> </h3>
@@ -42,5 +42,6 @@
      
     </div>
   </div>
+  <script src="mony.js"></script>
 </body>
 </html>
