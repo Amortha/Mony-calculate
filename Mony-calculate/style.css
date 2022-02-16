@@ -1,19 +1,28 @@
- body{
-margin: 0;
-padding: 0;
+.second-col{
+    background-color:rgb(236, 240, 227) ;
+
 }
 .input{
-    background-color:rgb(220,220,220);
+    background-color:rgb(216, 211, 211);
     border: none;
     height: 35px;
-    margin-left:10px;
+   
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.input-alinment1{
+    margin-left:15px;
+}
+.input-alinment2{
+    margin-left:30px;
+}
+.input-alinment4{
+    margin-left:50px;
 }
 .bottam-input{
     width: 100px;
     height: 40px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-color:rgb(220,220,220);
     border: none;
 }
