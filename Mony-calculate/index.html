@@ -13,54 +13,55 @@
 </head>
 <body>
     <section class="container bg-white">
-        <!-- heading -->
-        <h1 class="text-center m-5 text-primary fw-bold ">Monthly Money Management</h1>
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <img class="img-fluid" src="img/pexels-cottonbro-3943723.jpg" alt="">
-            </div>
-            <!-- input field -->
-            <div class="col-sm-12 col-md-6 p-3 bg-light">
-                <div class="p-3">
+        <!-- head titale -->
+      <h1 class="text-center m-5 text-primary fw-bold "> My Monthly Salary calculation</h1>
+       <div class="row">
+           <div class="col-sm-12 col-md-6 col-lg-6">
+          <img width="100%" height="600px" src="images/maxresdefault.jpg" alt="">
+        </div>
+      <!-- input field -->
+        <div class="col-sm-12 col-md-6 p-3 col-lg-6 second-col">
+              <div class="p-3">
+                 <!-- income  -->
                     <h5 class="text-center m-2">Inceome</h5>
-
                     <div class="text-center mt-2">
-                        <label>Income :</label>
-                        <input id="income-total" type="text"><br>
+                      <label>Income :</label>
+                      <input class="input" id="income-total" type="text"><br>
                     </div>
-
-                    <h5 class="text-center m-2">Expenses</h5>
-
+                      <!-- Expenses  -->
+                      <h5 class="text-center m-2">Expenses</h5>
+                      <!-- food  -->
                     <div class="text-center mt-2">
-                        <label class="mt-3">Food:</label>
-                        <input id="foodexp-total" type="text"><br>
+                      <label class="mt-3">Food:</label>
+                      <input class="input input-alinment1" id="foodexp-total" type="text"><br>
                     </div>
-
+                    <!-- Rent  -->
                     <div class="text-center mt-2">
-                        <label>Rent:</label>
-                        <input id="rentexp-total" class="mt-3" type="text"><br>
+                      <label>Rent:</label>
+                      <input class="input input-alinment2" id="rentexp-total" class="mt-3" type="text"><br>
                     </div>
-
+                    <!-- clothes  -->
                     <div class="text-center mt-2">
-                        <label>Clothes:</label>
-                        <input id="clothexp-total" class="mt-3" type="text">
-                        <p id="cloth-error" class="text-danger">Enter a posative number!</p>
+                      <label>Clothes:</label>
+                      <input class="input " id="clothexp-total" class="mt-3" type="text">
+                      <p id="cloth-error" class="text-danger">Enter a posative number!</p>
                     </div>
                 </div>
-                <!-- calculation button -->
+
+                <!-- calculation total -->
                 <div class="text-center">
-                    <button id="calculating-btn" class="btn btn-primary">Calculate</button>
+                <button id="calculating-btn" class="btn btn-primary px-4">Calculate</button>
                 </div>
                 <!-- total expenses -->
                 <h5 class="text-center m-2">Total Expnses: <span id="expense-total">0</span></h5>
                 <h5 class="text-center m-2">Balance: <span id="balance-total">0</span></h5>
                 <div class="text-center">
                     <label>Save:</label>
-                    <input id="parcent-total" class="parcent" type="text">
-                    <span>%</span>
+                    <input  id="parcent-total" class="parcent bottam-input" type="text">
+                    <span class="px-2">%</span>
                     <button id="save-button" class="btn btn-primary py-2">Save</button>
                 </div>
-                <!-- saving and remaining balance -->
+                <!-- saving and remaining Balance -->
                 <h5 class="text-center m-2">Saving Amount: <span id="saved-amount">0</span></h5>
                 <h5 class="text-center m-2">Remaining Balance: <span id="remaining-balance">0</span></h5>
             </div>
