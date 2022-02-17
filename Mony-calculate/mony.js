@@ -1,33 +1,56 @@
-document.getElementById('Calculate').addEventListener('click',function(){
-    // food input 
- const foodinput = document.getElementById('food-input');
- const newfoodamounttext =foodinput.value;
- const newfoodamount = parseInt(newfoodamounttext);
+function getInputValue(inputId) {
+    const inputTotal = document.getElementById(inputId + '-total');
+    const inputTotalText = inputTotal.value;
+    const inputTotalAmount = parseInt(inputTotalText);
+    return inputTotalAmount;
+}
+// calculate button
+document.getElementById('calculating-btn').addEventListener('click', () => {
+    // income total
+    const incomeTotalAmount = getInputValue('income');
+    // Food expense
+    const foodExpAmount = getInputValue('foodexp');
+    // Rent expense
+    const rentExpAmount = getInputValue('rentexp');
+    // Clothes expense
+    const clothExpAmount = getInputValue('clothexp');
+    if (clothExpAmount < 0) {
+        document.getElementById('cloth-error').style.display = 'block';
+    } else {
+        document.getElementById('cloth-error').style.display = 'none';
+    }
+    // total expense
+    const totalExp = document.getElementById('expense-total');
+    if (foodExpAmount > 0 && rentExpAmount > 0 && clothExpAmount > 0) {
+        totalExp.innerText = foodExpAmount + rentExpAmount + clothExpAmount;
+    }
+    const totalExpAmount = parseInt(totalExp.innerText);
+    // update balance
+    const balance = document.getElementById('balance-total');
+    if (incomeTotalAmount > 0 && totalExpAmount > 0) {
+        balance.innerText = incomeTotalAmount - totalExpAmount;
+    }
+});
+// save button
+document.getElementById('save-button').addEventListener('click', () => {
+    // balance
+    const balanceText = document.getElementById('balance-total');
+    const balanceAmount = parseInt(balanceText.innerText);
+    console.log(balanceAmount);
+    // saving balance
+    const saveBalanceText = document.getElementById('saved-amount');
+    const saveBalance = parseInt(saveBalanceText.innerText);
+    console.log(saveBalance);
 
-// Rent 
- const rentinput = document.getElementById('rent-input');
- const newrentinputtext = rentinput.value;
- const newrentamount = parseInt(newrentinputtext)
- const foodrenttotal = newfoodamount + newrentamount;
-
-//  clothes 
-const clothesinput = document.getElementById('clothes-input');
-const newclothestext = clothesinput.value ;
-const newclothesamount = parseInt(newclothestext)
-const foodrentcloth = foodrenttotal + newclothesamount
-
-// update total-Expenses
-const totalExpenses = document.getElementById('total-Expense')
-const previostotalExpensestext = totalExpenses.innerText;
-const previostotalExpensesamount = parseInt(previostotalExpensestext);
-const newExpenses = previostotalExpensesamount +foodrentcloth ;
-
-totalExpenses.innerText= newExpenses;
-// update Balance 
-const blancetotal = document.getElementById('total-Balance');
-const previousBlancetext = blancetotal.innerText;
-const previousBlancetotal = parseInt(previousBlancetext);
-const newBlancetotal = previousBlancetotal - newExpenses ;
-blancetotal.innerText = newBlancetotal;
-console.log(blancetotal)
-})
+    const parcent = getInputValue('parcent');
+    const incomeTotalAmount = getInputValue('income');
+    // find parcent
+    const findOutPercent = (incomeTotalAmount / 100) * parcent;
+    // update  parcent
+    const saveMoney = document.getElementById('saved-amount');
+    saveMoney.innerText = findOutPercent;
+    const saveMoneyAmount = parseInt(saveMoney.innerText);
+    const remindingBalance = document.getElementById('remaining-balance');
+    const remindingBalanceAmount = balanceAmount - saveMoneyAmount;
+    remindingBalance.innerText = remindingBalanceAmount;
+});
