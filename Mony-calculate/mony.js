@@ -8,10 +8,10 @@ function getInputValue(inputId){
 document.getElementById('calculating-btn').addEventListener('click', () => {
     // income total
     const incomeTotalAmount = getInputValue('income');
-
+ 
     // Food 
     const foodExpAmount = getInputValue('foodexp');
-
+  
     // Rent 
     const rentExpAmount = getInputValue('rentexp');
 
@@ -37,6 +37,7 @@ document.getElementById('calculating-btn').addEventListener('click', () => {
     if (incomeTotalAmount > 0 && totalExpAmount > 0) {
         balance.innerText = incomeTotalAmount - totalExpAmount;
     }
+    
 });
 
 // save Blance 
