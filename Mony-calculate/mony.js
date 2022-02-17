@@ -24,9 +24,10 @@ const newExpenses = previostotalExpensesamount +foodrentcloth ;
 
 totalExpenses.innerText= newExpenses;
 // update Balance 
-const blancetotal = document.getElementById('income-input');
+const blancetotal = document.getElementById('total-Balance');
 const previousBlancetext = blancetotal.innerText;
 const previousBlancetotal = parseInt(previousBlancetext);
-const newBlancetotal = previousBlancetotal - foodrentcloth;
+const newBlancetotal = previousBlancetotal - newExpenses ;
 blancetotal.innerText = newBlancetotal;
+console.log(blancetotal)
 })
